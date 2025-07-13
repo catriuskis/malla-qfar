@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* celeste claro */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #37a181;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.malla-grid {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.semestre {
+  min-width: 220px;
+  background-color: #b2ebf2; /* celeste medio */
+  border: 2px solid #4dd0e1; /* borde celeste más fuerte */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.semestre h2 {
+  text-align: center;
+  color: #00796b; /* verde */
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #80deea; /* línea separadora */
+  padding-bottom: 6px;
+}
+
+.ramo {
+  background: linear-gradient(145deg, #a7ffeb, #80deea); /* verdes y celestes */
+  border: 1px solid #00796b;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #000; /* texto negro */
+  font-weight: 600;
+  box-shadow: 4px 4px 8px #88cbc3, -4px -4px 8px #c8f7f3;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.ramo:hover {
+  background: linear-gradient(145deg, #4dd0e1, #26c6da);
+  box-shadow: 6px 6px 10px #68b6b2, -6px -6px 10px #a8ede9;
+  color: #004d40; /* verde más oscuro */
+}
+
+.ramo:active {
+  box-shadow: inset 3px 3px 5px #68b6b2, inset -3px -3px 5px #a8ede9;
+}
+
+.ramo.bloqueado {
+  background-color: #f3f3f3;
+  color: #999;
+  border-style: dashed;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: none;
+}
+
+.ramo.aprobado {
+  background: linear-gradient(145deg, #c8e6c9, #a5d6a7) !important;
+  color: #1b5e20; /* verde aprobado */
+  border-color: #2e7d32;
+  text-decoration: line-through;
+  font-style: italic;
+  box-shadow: 4px 4px 8px #a4c2a7, -4px -4px 8px #d0f0d0;
+}
+
+/* Botón fijo en esquina superior derecha */
+#infoBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #37a181;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(55, 161, 129, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#infoBtn:hover {
+  background-color: #2d8e6f;
+}
+
+/* Fondo oscuro del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del modal */
+.modal-content {
+  background: #ffffff;
+  margin: 10% auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  position: relative;
+}
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Estilos texto modal */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #37a181;
+  border-bottom: 2px solid #37a18133;
+  padding-bottom: 10px;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  margin: 10px 0 20px;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+}
+
+.titulo-requisito h3 {
+  color: #37a181;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 4px;
+}
+
+.titulo-requisito p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

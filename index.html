@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla interactiva Química y Farmacia UACH</title>
+  <meta name="description" content="Malla curricular Química y Farmacia UACH.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+<!-- Botón para abrir información -->
+<button id="infoBtn">Información</button>
+
+<!-- Recuadro de información (modal) -->
+<div id="modalInfo" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	 <h2>Química y Farmacia</h2>
+    <p><strong>Grado Académico:</strong></p>
+    <ul>
+      <li>Bachiller en Ciencias</li>
+      <li>Licenciado/a en Ciencias Farmacéuticas</li>
+    </ul>
+	 <h2>Requisitos de titulación</h2>
+
+    <div class="titulo-requisito">
+      <h3>Bachillerato en Ciencias</h3>
+      <p>120 Créditos SCT, correspondiente a todas las asignaturas de los 4 primeros semestres aprobadas</p>
+    </div>
+
+    <div class="titulo-requisito">
+      <h3>Licenciatura en Ciencias Farmacéuticas</h3>
+      <p>240 Créditos SCT, correspondiente a todas las asignaturas de los 8 primeros semestres aprobadas</p>
+    </div>
+
+    <div class="titulo-requisito">
+      <h3>Título profesional de Química Farmacéutico/Químico Farmacéutico</h3>
+      <p>330 Créditos SCT, correspondiente a todas las asignaturas de los 11 semestres aprobadas</p>
+    </div>
+	    <h2>Alternativas de titulación</h2>
+    <p><strong>Contempla tres alternativas de titulación entre el 10° y 11° semestre:</strong></p>
+    <p>a) Trabajo de título (Tesis)</p>
+    <p>b) Internado</p>
+    <p>c) Vinculación con Postgrado</p>
+  </div>
+</div>
+
+  <h1>Química y Farmacia UACH</h1>
+  <div class="malla-grid">
+    <div class="semestre" id="sem1">
+      <h2>1° Semestre</h2>
+      <div class="ramo" id="BIMI065" onclick="aprobar('BIMI065')">Biología Celular</div>
+      <div class="ramo" id="CIDI055" onclick="aprobar('CIDI055')">Comunicación en lengua Materna</div>
+      <div class="ramo" id="DYRE070" onclick="aprobar('DYRE070')">Educación Física y Salud</div>
+      <div class="ramo" id="MATM067" onclick="aprobar('MATM067')">Álgebra</div>
+      <div class="ramo" id="QFAR080" onclick="aprobar('QFAR080')">El papel del/la farmacéutico/a en la historia y sociedad</div>
+      <div class="ramo" id="QUIM077" onclick="aprobar('QUIM077')">Bases de química</div>
+    </div>
+
+    <div class="semestre" id="sem2">
+  <h2>2° Semestre</h2>
+  <div class="ramo bloqueado" id="HIPA088" onclick="aprobar('HIPA088')">Biología Humana</div>
+  <div class="ramo bloqueado" id="CIDI077" onclick="aprobar('CIDI077')">Inglés I</div>
+  <div class="ramo bloqueado" id="FSCA093" onclick="aprobar('FSCA093')">Física Básica</div>
+  <div class="ramo bloqueado" id="MATM086" onclick="aprobar('MATM086')">Cálculo</div>
+  <div class="ramo bloqueado" id="QFAR090" onclick="aprobar('QFAR090')">Responsabilidad social del/la químico/a farmacéutico/a </div>
+  <div class="ramo bloqueado" id="QUIM098" onclick="aprobar('QUIM098')">Equilibrio químico</div>
+</div>
+
+    <div class="semestre" id="sem3">
+  <h2>3° Semestre</h2>
+  <div class="ramo bloqueado" id="FISL100" onclick="aprobar('FISL100')">Fisiología General</div>
+  <div class="ramo bloqueado" id="CIDI079" onclick="aprobar('CIDI079')">Inglés II</div>
+  <div class="ramo bloqueado" id="FSCA097" onclick="aprobar('FSCA097')">Física para ciencias</div>
+  <div class="ramo bloqueado" id="ELECT12" onclick="aprobar('ELECT12')">Optativo de formación general I</div>
+  <div class="ramo bloqueado" id="QFAR125" onclick="aprobar('QFAR125')">Taller de proyectos farmacéuticos</div>
+  <div class="ramo bloqueado" id="QUIM123" onclick="aprobar('QUIM123')">Química orgánica</div>
+  <div class="ramo bloqueado" id="QUIM129" onclick="aprobar('QUIM129')">Análisis químico</div>
+</div>
+
+<div class="semestre" id="sem4">
+  <h2>4° Semestre</h2>
+  <div class="ramo bloqueado" id="BIMI166" onclick="aprobar('BIMI166')">Bioquímica</div>
+  <div class="ramo bloqueado" id="ELECT13" onclick="aprobar('ELECT13')">Optativo de formación general II</div>
+  <div class="ramo bloqueado" id="QFAR130" onclick="aprobar('QFAR130')">Principios de farmacología y gestión del medicamento</div>
+  <div class="ramo bloqueado" id="QUIM156" onclick="aprobar('QUIM156')">Química orgánica para farmacia</div>
+  <div class="ramo bloqueado" id="QUIM160" onclick="aprobar('QUIM160')">Química orgánica aplicada</div>
+  <div class="ramo bloqueado" id="QUIM169" onclick="aprobar('QUIM169')">Análisis instrumental</div>
+</div>
+
+<div class="semestre" id="sem5">
+  <h2>5° Semestre</h2>
+  <div class="ramo bloqueado" id="BIMI194" onclick="aprobar('BIMI194')">Bioquímica clínica y hematología general</div>
+  <div class="ramo bloqueado" id="HIPA145" onclick="aprobar('HIPA145')">Fisiopatología humana</div>
+  <div class="ramo bloqueado" id="INMU157" onclick="aprobar('INMU157')">Inmunología</div>
+  <div class="ramo bloqueado" id="QFAR122" onclick="aprobar('QFAR122')">Comunicación farmacéutica en lengua inglesa</div>
+  <div class="ramo bloqueado" id="QFAR140" onclick="aprobar('QFAR140')">Farmacoquímica y análisis de medicamentos</div>
+  <div class="ramo bloqueado" id="QFAR207" onclick="aprobar('QFAR207')">Farmacognosia e introducción a la fitoterapia</div>
+</div>
+
+<div class="semestre" id="sem6">
+  <h2>6° Semestre</h2>
+  <div class="ramo bloqueado" id="BIMI172" onclick="aprobar('BIMI172')">Microbiología</div>
+  <div class="ramo bloqueado" id="CIDI178" onclick="aprobar('CIDI178')">Relaciones humanas en el ámbito farmacéutico</div>
+  <div class="ramo bloqueado" id="PRST169" onclick="aprobar('PRST169')">Parasitología humana</div>
+  <div class="ramo bloqueado" id="QFAR209" onclick="aprobar('QFAR209')">Farmacología general y molecular</div>
+  <div class="ramo bloqueado" id="QFAR217" onclick="aprobar('QFAR217')">Tecnología farmacéutica: Sólidos y Líquidos</div>
+  <div class="ramo bloqueado" id="QFAR218" onclick="aprobar('QFAR218')">Bromatología</div>
+</div>
+
+<div class="semestre" id="sem7">
+  <h2>7° semestre</h2>
+  <div class="ramo bloqueado" id="ELECT100" onclick="aprobar('ELECT100')">Optativo de especialización I</div>
+  <div class="ramo bloqueado" id="ESQF173" onclick="aprobar('ESQF173')">Práctica inicial</div>
+  <div class="ramo bloqueado" id="ESTD157" onclick="aprobar('ESTD157')">Bioestadística</div>
+  <div class="ramo bloqueado" id="QFAR219" onclick="aprobar('QFAR219')">Farmacología de sistemas</div>
+  <div class="ramo bloqueado" id="QFAR223" onclick="aprobar('QFAR223')">Farmacología de quimioterapéuticos</div>
+  <div class="ramo bloqueado" id="QFAR225" onclick="aprobar('QFAR225')">Tecnología farmacéutica: Semisólidos</div>
+  <div class="ramo bloqueado" id="QFAR229" onclick="aprobar('QFAR229')">Nutrición humana</div>
+</div>
+
+<div class="semestre" id="sem8">
+  <h2>8° semestre</h2>
+  <div class="ramo bloqueado" id="DPUB155" onclick="aprobar('DPUB155')">Legislación farmacéutica</div>
+  <div class="ramo bloqueado" id="ELECT101" onclick="aprobar('ELECT101')">Optativo de especialización II</div>
+  <div class="ramo bloqueado" id="QFAR231" onclick="aprobar('QFAR231')">Farmacoterapia de patologías infecciosas</div>
+  <div class="ramo bloqueado" id="QFAR235" onclick="aprobar('QFAR235')">Farmacoterapia de patologías no infecciosas</div>
+  <div class="ramo bloqueado" id="QFAR237" onclick="aprobar('QFAR237')">Biofarmacia y farmacocinética</div>
+  <div class="ramo bloqueado" id="QFAR239" onclick="aprobar('QFAR239')">Toxicología</div>
+  <div class="ramo bloqueado" id="QFAR241" onclick="aprobar('QFAR241')">Gira de tecnología farmacéutica</div>
+</div>
+
+<div class="semestre" id="sem9">
+  <h2>9° semestre</h2>
+  <div class="ramo bloqueado" id="ELECT112" onclick="aprobar('ELECT112')">Optativo de profundización I</div>
+  <div class="ramo bloqueado" id="ESQF200" onclick="aprobar('ESQF200')">Práctica intermedia</div>
+  <div class="ramo bloqueado" id="QFAR245" onclick="aprobar('QFAR245')">Farmacología clínica y atención farmacéutica</div>
+  <div class="ramo bloqueado" id="QFAR247" onclick="aprobar('QFAR247')">Gestión farmacéutica</div>
+  <div class="ramo bloqueado" id="QFAR251" onclick="aprobar('QFAR251')">Experiencia clínica y hospitalaria</div>
+  <div class="ramo bloqueado" id="SALP200" onclick="aprobar('SALP200')">Gestión en servicios de salud</div>
+</div>
+
+<div class="semestre" id="sem10">
+  <h2>10° semestre</h2>
+  <div class="ramo bloqueado" id="ESQF295" onclick="aprobar('ESQF295')">Práctica profesional</div>
+  <div class="ramo bloqueado" id="ESQF296" onclick="aprobar('ESQF296')">Proyecto de investigación (a)</div>
+  <div class="ramo bloqueado" id="QFAR255" onclick="aprobar('QFAR255')">Internado inicial (b)</div>
+</div>
+
+<div class="semestre" id="sem11">
+  <h2>11° semestre</h2>
+  <div class="ramo bloqueado" id="ESQF298" onclick="aprobar('ESQF298')">Trabajo de título (a)</div>
+  <div class="ramo bloqueado" id="QFAR260" onclick="aprobar('QFAR260')">Internado profesional vinculante (b)</div>
+</div>
+  <script src="script.js"></script>
+
+<script>
+  const modal = document.getElementById("modalInfo");
+  const btn = document.getElementById("infoBtn");
+  const span = document.querySelector(".close");
+
+  // Abrir modal
+  btn.onclick = function () {
+    modal.style.display = "block";
+	btn.style.display = "none";
+  }
+
+  // Cerrar al hacer clic en la "X"
+  span.onclick = function () {
+    modal.style.display = "none";
+	btn.style.display = "block"; 
+  }
+
+  // Cerrar si se hace clic fuera del contenido
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+	  btn.style.display = "block"; 
+    }
+  }
+</script>
+</body>
+</html>
